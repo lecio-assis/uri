@@ -1,6 +1,6 @@
 #include<stdio.h>
 
-int quad(int *matriz);
+int quad(int *);
 
 int teste();
 
@@ -18,11 +18,11 @@ int main(){
     return 0;
 }
 
-int quad(int *matriz){
+int quad(int *sudoku){
     int x, y;
-    int quad[] = {*matriz, *(matriz+1), *(matriz+2),
-                  *(matriz+9), *(matriz+10), *(matriz+11),
-                  *(matriz+18), *(matriz+19), *(matriz+20)};
+    int quad[] = {*sudoku, *(sudoku+1), *(sudoku+2),
+                  *(sudoku+9), *(sudoku+10), *(sudoku+11),
+                  *(sudoku+18), *(sudoku+19), *(sudoku+20)};
     for(x = 0; x < 9; x++){
         for(y = 0; y < 9; y++){
             if(x != y && quad[x] == quad[y]){
@@ -36,7 +36,7 @@ int quad(int *matriz){
 int teste(){
     int x, y, z, sudoku[9][9];
 
-    //scanf da matriz
+    //scanf do sudoku
 
     for(x = 0; x < 9; x++){
         for(y = 0; y < 9; y++){
