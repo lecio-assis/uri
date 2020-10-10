@@ -5,7 +5,7 @@ int quad(int *);
 int teste();
 
 int main(){
-    int k, l, test;
+    int k = 0, l = 0;
     scanf("%i", &k);
     while(l!=k){
         l++;
@@ -19,7 +19,7 @@ int main(){
 }
 
 int quad(int *sudoku){
-    int x, y;
+    int x = 0, y = 0;
     int quad[] = {*sudoku, *(sudoku+1), *(sudoku+2),
                   *(sudoku+9), *(sudoku+10), *(sudoku+11),
                   *(sudoku+18), *(sudoku+19), *(sudoku+20)};
@@ -34,7 +34,7 @@ int quad(int *sudoku){
 }
 
 int teste(){
-    int x, y, z, sudoku[9][9];
+    int x = 0, y = 0, z = 0, sudoku[9][9];
 
     //scanf do sudoku
 
